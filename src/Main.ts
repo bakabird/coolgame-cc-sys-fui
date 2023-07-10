@@ -1,6 +1,6 @@
 import { BoneAnim } from "./BoneAnim";
 import { DlgBase } from "./DlgBase";
-import { DlgKit } from "./DlgKit";
+import { DlgKit, DlgLayer } from "./DlgKit";
 import FgoPool from "./FgoPool";
 import ListItem from "./ListItem";
 import ListWrap from "./ListWrap";
@@ -17,3 +17,4 @@ export { ListWrap };
 export { UIBase };
 export { UIDocker };
 export { UIWrap };
+export { DlgLayer };

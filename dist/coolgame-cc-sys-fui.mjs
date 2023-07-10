@@ -1325,4 +1325,4 @@ class ListWrap extends UIWrap {
     }
 }
 
-export { BoneAnim, DlgBase, DlgKit, FUISys, FgoPool, ListItem, ListWrap, UIBase, UIDocker, UIWrap };
+export { BoneAnim, DlgBase, DlgKit, DlgLayer, FUISys, FgoPool, ListItem, ListWrap, UIBase, UIDocker, UIWrap };

@@ -10,7 +10,7 @@
 declare module 'coolgame-cc-sys-fui' {
     import { BoneAnim } from "coolgame-cc-sys-fui/BoneAnim";
     import { DlgBase } from "coolgame-cc-sys-fui/DlgBase";
-    import { DlgKit } from "coolgame-cc-sys-fui/DlgKit";
+    import { DlgKit, DlgLayer } from "coolgame-cc-sys-fui/DlgKit";
     import FgoPool from "coolgame-cc-sys-fui/FgoPool";
     import ListItem from "coolgame-cc-sys-fui/ListItem";
     import ListWrap from "coolgame-cc-sys-fui/ListWrap";
@@ -27,6 +27,7 @@ declare module 'coolgame-cc-sys-fui' {
     export { UIBase };
     export { UIDocker };
     export { UIWrap };
+    export { DlgLayer };
 }
 
 declare module 'coolgame-cc-sys-fui/BoneAnim' {

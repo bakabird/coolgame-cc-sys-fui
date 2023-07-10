@@ -35,10 +35,6 @@ export class FUISys extends SysBase {
 
     protected OnInit(complete: Action): void {
         fgui.GRoot.create();
-        this.root.node.getComponent(UITransform).setContentSize(1920, 1080);
-        const rootWidget = this.root.node.addComponent(Widget);
-        rootWidget.isAlignHorizontalCenter = true;
-        rootWidget.isAlignVerticalCenter = true;
         this._fgoPool = new fgui.GObjectPool();
         complete()
     }

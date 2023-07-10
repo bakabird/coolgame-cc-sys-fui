@@ -48,6 +48,7 @@ export abstract class DlgBase extends UIBase {
         this._isClosing = false;
         this._internal_isShow = true;
         this.node.name = this.dlgRes;
+        this._initFullScreen();
         this._initBlackGraph();
         this._initCloseButton();
         this._initPlatAjust();
@@ -89,6 +90,12 @@ export abstract class DlgBase extends UIBase {
 
     private _initChannelAjust() {
         this.ajustChannel("")
+    }
+
+    private _initFullScreen() {
+        if (this.OnGetFullScreen()) {
+            this.fgc.makeFullScreen()
+        }
     }
 
     private _initBlackGraph() {
@@ -247,6 +254,14 @@ export abstract class DlgBase extends UIBase {
      * 点击背景是否关闭
      */
     protected OnBgClickClose(): boolean {
+        return true;
+    }
+
+    /**
+     * 窗口是否要全屏化
+     * @returns 
+     */
+    protected OnGetFullScreen(): boolean {
         return true;
     }
 

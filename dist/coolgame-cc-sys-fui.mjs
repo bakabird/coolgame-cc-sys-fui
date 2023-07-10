@@ -1,7 +1,7 @@
 import * as fgui from 'fairygui-ccc370';
 import { VertAlignType, AlignType, GObjectPool, GComponent, GLoader, LoaderFillType, GGraph } from 'fairygui-ccc370';
 import { isNull, PoolModule, getEnumName, className, arrayRemoveAll, Shake2DModule, deepClone, notNull, removeNullKeys } from 'gnfun';
-import { UITransform, Widget, Vec2, find, tween, Tween, Color } from 'cc';
+import { Vec2, find, tween, Tween, Color } from 'cc';
 import { SysBase, KitBase } from 'coolgame-cc';
 import TimeSys from 'coolgame-cc-sys-time';
 import { XTween } from 'gnfun-cc';
@@ -147,10 +147,6 @@ class FUISys extends SysBase {
     }
     OnInit(complete) {
         fgui.GRoot.create();
-        this.root.node.getComponent(UITransform).setContentSize(1920, 1080);
-        const rootWidget = this.root.node.addComponent(Widget);
-        rootWidget.isAlignHorizontalCenter = true;
-        rootWidget.isAlignVerticalCenter = true;
         this._fgoPool = new fgui.GObjectPool();
         complete();
     }
@@ -1003,6 +999,7 @@ class DlgBase extends UIBase {
         this._isClosing = false;
         this._internal_isShow = true;
         this.node.name = this.dlgRes;
+        this._initFullScreen();
         this._initBlackGraph();
         this._initCloseButton();
         this._initPlatAjust();
@@ -1042,6 +1039,11 @@ class DlgBase extends UIBase {
     }
     _initChannelAjust() {
         this.ajustChannel("");
+    }
+    _initFullScreen() {
+        if (this.OnGetFullScreen()) {
+            this.fgc.makeFullScreen();
+        }
     }
     _initBlackGraph() {
         let blackGraph = this.getChild(DlgBase.SystemCtrl.BlackGraph);
@@ -1189,6 +1191,13 @@ class DlgBase extends UIBase {
      * 点击背景是否关闭
      */
     OnBgClickClose() {
+        return true;
+    }
+    /**
+     * 窗口是否要全屏化
+     * @returns
+     */
+    OnGetFullScreen() {
         return true;
     }
     /**

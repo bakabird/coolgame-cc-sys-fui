@@ -106,6 +106,11 @@ declare module 'coolgame-cc-sys-fui/DlgBase' {
                 */
             protected OnBgClickClose(): boolean;
             /**
+                * 窗口是否要全屏化
+                * @returns
+                */
+            protected OnGetFullScreen(): boolean;
+            /**
                 * 获取背景透明度，0表示不需要背景
              */
             protected OnGetBgAlpha(): number;

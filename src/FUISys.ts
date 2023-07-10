@@ -3,15 +3,30 @@ import { SysBase } from "coolgame-cc";
 import { Action } from "coolgame-cc/Define";
 import * as fgui from "fairygui-ccc370";
 import FgoPool from "./FgoPool";
+import TimeSys from "coolgame-cc-sys-time";
 
 export class FUISys extends SysBase {
     public sysName: string = "FUISys";
 
-    private _allUILoaded: boolean = false;
+    private _getPlat: () => string;
+    private _getChannel: () => string;
     private _fgoPool: fgui.GObjectPool;
+    private _timeSys: TimeSys;
+
+    public get timeSys(): TimeSys {
+        return this._timeSys;
+    }
 
     public get fgoPool(): fgui.GObjectPool {
         return this._fgoPool;
+    }
+
+    public get plat(): string {
+        return this._getPlat()
+    }
+
+    public get channel(): string {
+        return this._getChannel()
     }
 
     public get root() {
@@ -33,6 +48,12 @@ export class FUISys extends SysBase {
     }
 
     protected OnDispose(): void {
+    }
+
+    public init(timeSys: TimeSys, getPlat?: () => string, getChannel?: () => string) {
+        this._timeSys = timeSys;
+        this._getPlat = getPlat;
+        this._getChannel = getChannel;
     }
 
     public loadPackage(packPath: string, onProgress?: (finish: number, total: number) => void, onLoaded?: (error: any) => void) {

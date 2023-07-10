@@ -1,6 +1,6 @@
 {
   "name": "coolgame-cc-sys-fui",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A coolgame-cc fui system.",
   "main": "dist/coolgame-cc-sys-fui.mjs",
   "types": "dist/coolgame-cc-sys-fui.d.ts",
@@ -24,7 +24,8 @@
   "author": "bakabird",
   "license": "MIT",
   "dependencies": {
-    "gnfun": "^0.0.8"
+    "gnfun": "^0.0.11",
+    "gnfun-cc": "^0.0.2"
   },
   "devDependencies": {
     "@types/node": "^20.4.1",

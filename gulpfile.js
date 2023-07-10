@@ -8,7 +8,7 @@ const package = require("./package.json")
 const tsProject = ts.createProject('tsconfig.json', { declaration: true });
 
 const name = package.name
-const external = ['cc', 'cc/env', 'coolgame-cc', 'gnfun', 'fairygui-ccc370']
+const external = ['cc', 'cc/env', 'coolgame-cc', 'gnfun', 'fairygui-ccc370', 'gnfun-cc', 'coolgame-cc-sys-time']
 
 const onwarn = warning => {
     // Silence circular dependency warning for moment package

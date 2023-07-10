@@ -1,0 +1,38 @@
+{
+  "name": "coolgame-cc-sys-fui",
+  "version": "0.0.1",
+  "description": "A coolgame-cc fui system.",
+  "main": "dist/coolgame-cc-sys-fui.mjs",
+  "types": "dist/coolgame-cc-sys-fui.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bakabird/coolgame-cc-sys-fui"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "dist/coolgame-cc-sys-fui.mjs",
+    "dist/coolgame-cc-sys-fui.min.mjs",
+    "dist/coolgame-cc-sys-fui.d.ts"
+  ],
+  "keywords": [
+    "game",
+    "coolgame"
+  ],
+  "author": "bakabird",
+  "license": "MIT",
+  "dependencies": {
+    "gnfun": "^0.0.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.1",
+    "dts-bundle": "^0.7.3",
+    "gulp": "^4.0.2",
+    "gulp-rename": "^2.0.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "gulp-uglify-es": "^2.0.0",
+    "rollup": "^3.26.2"
+  }
+}

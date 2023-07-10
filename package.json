@@ -1,6 +1,6 @@
 {
   "name": "coolgame-cc-sys-fui",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A coolgame-cc fui system.",
   "main": "dist/coolgame-cc-sys-fui.mjs",
   "types": "dist/coolgame-cc-sys-fui.d.ts",

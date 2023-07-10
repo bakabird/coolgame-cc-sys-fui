@@ -52,8 +52,8 @@ export class FUISys extends SysBase {
 
     public init(timeSys: TimeSys, getPlat?: () => string, getChannel?: () => string) {
         this._timeSys = timeSys;
-        this._getPlat = getPlat;
-        this._getChannel = getChannel;
+        this._getPlat = getPlat ?? (() => "default");
+        this._getChannel = getChannel ?? (() => "default");
     }
 
     public loadPackage(packPath: string, onProgress?: (finish: number, total: number) => void, onLoaded?: (error: any) => void) {

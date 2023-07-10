@@ -161,8 +161,8 @@ class FUISys extends SysBase {
     }
     init(timeSys, getPlat, getChannel) {
         this._timeSys = timeSys;
-        this._getPlat = getPlat;
-        this._getChannel = getChannel;
+        this._getPlat = getPlat !== null && getPlat !== void 0 ? getPlat : (() => "default");
+        this._getChannel = getChannel !== null && getChannel !== void 0 ? getChannel : (() => "default");
     }
     loadPackage(packPath, onProgress, onLoaded) {
         fgui.UIPackage.loadPackage(packPath, onProgress, onLoaded);
